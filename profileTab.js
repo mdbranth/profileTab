@@ -29,7 +29,9 @@ function getProfileTabs($, _, profiles) {
 }
 
 function getTabHeader($, _, num, profile) {
-  return profilePicture.get($, _, profile).addClass('ef-tab-head').attr('data-tab-num', num);
+  var elt = profilePicture.get($, _, profile).addClass('ef-tab-head').attr('data-tab-num', num);
+  if (num == 0) elt.addClass('selected');
+  return elt;
 }
 
 function getTabBody($, _, num, profile) {
@@ -47,5 +49,7 @@ function getTabBody($, _, num, profile) {
 
 function selectTab($, _, num) {
   $('.ef-tab-body').trigger('hide');
+  $('.ef-tab-head.selected').removeClass('selected');
   $('.ef-tab-body[data-tab-num=' + num + ']').trigger('show');
+  $('.ef-tab-head[data-tab-num=' + num + ']').addClass('selected');
 }
