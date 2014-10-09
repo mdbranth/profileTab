@@ -1,0 +1,26 @@
+{
+  "name": "profileTab",
+  "version": "0.0.0",
+  "description": "profileTab ==========",
+  "main": "profileTab.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mdbranth/profileTab.git"
+  },
+  "author": "Matthew Branthwaite",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mdbranth/profileTab/issues"
+  },
+  "homepage": "https://github.com/mdbranth/profileTab",
+  "devDependencies": {
+    "browserify": "2.25.0",
+    "less": "1.6.1"
+  },
+  "dependencies": {
+    "profilePicture": "git://github.com/mdbranth/profilePicture"
+  }
+}
